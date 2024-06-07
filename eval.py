@@ -1,6 +1,6 @@
 import torch
 
-def evaluate_model(model, testloader, criterion, device, optimizer):
+def evaluate_model(model, testloader, criterion, device, optimizer, args):
     model.eval()
     model.to(device)
     correct = 0
