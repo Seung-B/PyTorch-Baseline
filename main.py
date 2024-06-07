@@ -34,7 +34,7 @@ def main(args):
     scheduler = select_scheduler(optimizer, args.epochs, args.lr_decay)
     train_model(model, trainloader, criterion, optimizer, scheduler, args.epochs, args.train_verbose, device, args)
 
-    evaluate_model(model, testloader, criterion, device, optimizer)
+    evaluate_model(model, testloader, criterion, device, optimizer, args)
 
 
 if __name__ == '__main__':

@@ -18,3 +18,7 @@ def evaluate_model(model, testloader, criterion, device, optimizer):
     accuracy = 100 * correct / total
     print(f'Model: {model.__class__.__name__}, Optimizer: {optimizer.__class__.__name__}')
     print(f'Test Loss: {test_loss/len(testloader)}, Accuracy: {accuracy}%')
+    os.makedirs('log', exist_ok=True)
+    with open(f"log/{args.model}_pretrain_{args.pretrain}_{args.dataset}_{args.optimizer}_{args.learning_rate}_test_acc.csv", 'w') as f:
+        write = csv.writer(f)
+        write.writerow([loss_log])
