@@ -25,10 +25,22 @@ paper_reproduce_shell.sh
 To make your own experiments, here's arguments that you can use in this code.
 
 ### Arguments
+```
+--dataset, type=str, default='MNIST', help='Dataset to use (default: MNIST)'
+--model, type=str, default='SimpleMLP', help='Model to use (default: SimpleMLP)'
+--optimizer, type=str, default='SGD', help='Optimizer to use (default: SGD)'
+--learning_rate, type=float, default=0.01, help='Learning rate (default: 0.01)'
+--batch_size, type=int, default=64, help='Batch size (default: 64)'
+--epochs, type=int, default=10, help='Number of epochs (default: 10)'
+--pretrain, action='store_true', help='Use pretrained model'
+--lr_decay, type=int, default=10, help='Number of decay epochs (default: 10)'
+--train_verbose, action='store_true', help='Print training progress'
+--momentum, type=float, default=0.9, help='Momentum for SGD optimizer (default: 0.9)'
+--beta1, type=float, default=0.9, help='Beta1 for Adam optimizer (default: 0.9)'
+--beta2, type=float, default=0.999, help='Beta2 for Adam optimizer (default: 0.999)'
+```
 
-Train: TT
-
-All the training loss will be saved into 'log' directory.
+If you include ```--train_verbose``` in your command, all the training loss will be saved into 'log' directory.
 
 ## Evaluation
 
