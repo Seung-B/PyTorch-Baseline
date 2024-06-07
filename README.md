@@ -12,35 +12,33 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+>📋  Dataset will be downloaded automatically.
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+To train the model(s) and re-produce the numbers in the paper, run this shell:
 
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+```
+paper_reproduce_shell.sh
 ```
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+To make your own experiments, here's arguments that you can use in this code.
+
+### Arguments
+
+Train: TT
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+After the training is completed, the evaluation is automatically performed, and the accuracy is outputted. There is no need to enter a separate command.
 
 ## Pre-trained Models
 
-You can download pretrained models here:
+You can use pre-trained models for ResNet18, ResNet50 and DenseNet121:
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+```
+--pretrain --model <"Model Name : [resnet18, resnet50, densenet121]">
+```
 
 ## Results
 
@@ -53,8 +51,3 @@ Our model achieves the following performance on :
 | My awesome model   |     85%         |      95%       |
 
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
