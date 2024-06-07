@@ -26,7 +26,7 @@ To make your own experiments, here's arguments that you can use in this code.
 
 ### Arguments
 ```
---dataset, type=str, default='MNIST', help='Dataset to use (default: MNIST)'
+--dataset```, type=str, default='MNIST', help='Dataset to use (default: MNIST)'
 --model, type=str, default='SimpleMLP', help='Model to use (default: SimpleMLP)'
 --optimizer, type=str, default='SGD', help='Optimizer to use (default: SGD)'
 --learning_rate, type=float, default=0.01, help='Learning rate (default: 0.01)'
