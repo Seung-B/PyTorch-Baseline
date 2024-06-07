@@ -58,9 +58,8 @@ You can use pre-trained models for ResNet18, ResNet50 and DenseNet121:
 
 ## Results
 
-Our model achieves the following performance on :
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+### [Image Classification on SVHN](https://paperswithcode.com/dataset/svhn)
 
 | Model name         | Top 1 Accuracy  | Top 5 Accuracy |
 | ------------------ |---------------- | -------------- |
