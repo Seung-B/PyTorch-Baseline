@@ -28,6 +28,8 @@ To make your own experiments, here's arguments that you can use in this code.
 
 Train: TT
 
+All the training loss will be saved into 'log' directory.
+
 ## Evaluation
 
 After the training is completed, the evaluation is automatically performed, and the accuracy is outputted. There is no need to enter a separate command.
