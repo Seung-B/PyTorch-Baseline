@@ -35,3 +35,4 @@ torchvision==0.15.2+cu117
 triton==2.0.0
 typing_extensions==4.12.0
 urllib3==2.2.1
+scipy==1.13.1
