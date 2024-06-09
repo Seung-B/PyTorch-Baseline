@@ -1,4 +1,6 @@
+import os
 import torch
+import csv
 
 def evaluate_model(model, testloader, criterion, device, optimizer, args):
     model.eval()
@@ -21,4 +23,4 @@ def evaluate_model(model, testloader, criterion, device, optimizer, args):
     os.makedirs('log', exist_ok=True)
     with open(f"log/{args.model}_pretrain_{args.pretrain}_{args.dataset}_{args.optimizer}_{args.learning_rate}_test_acc.csv", 'w') as f:
         write = csv.writer(f)
-        write.writerow([loss_log])
+        write.writerow([accuracy])
