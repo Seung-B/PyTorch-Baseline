@@ -2,7 +2,6 @@
 
 This repository is the implementation of pyTorch Optimizer Experiment baseline. 
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
 ## Requirements
 
@@ -56,13 +55,39 @@ You can use pre-trained models for ResNet18, ResNet50 and DenseNet121:
 --pretrain --model <"Model Name : [resnet18, resnet50, densenet121]">
 ```
 
-## Results
-
-
-### [Image Classification on SVHN](https://paperswithcode.com/dataset/svhn)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+\begin{table}[t]
+\caption{Classification accuracies for ResNet18 on SVHN dataset}
+\label{sample-table}
+\vskip 0.15in
+\begin{center}
+\begin{small}
+\begin{tabular}{lcccr}
+\toprule
+Optimizer & learning rate & Train Loss & Accuracy\\
+\midrule
+SGD       & 0.1         & 4.97$e^{-8}$ & \textcolor{red}{93.22} \\
+Adam      & 0.1         & 1.94$e^{-3}$ & 19.59 \\
+AdaBelief & 0.1         & 1.98$e^{-3}$ & 19.59 \\
+SAM       & 0.1         & 2.66$e^{-10}$ & 92.88 \\
+SAM+Adam  & 0.1         & 1.92$e^{-3}$ & 19.59 \\
+SGD       & 0.01        & 3.51$e^{-8}$ & 90.56 \\
+Adam      & 0.01        & 2.79$e^{-11}$ & 93.06 \\
+AdaBelief & 0.01        & 8.63$e^{-11}$ & \textcolor{red}{93.81} \\
+SAM       & 0.01        & 7.36$e^{-11}$ & \textcolor{red}{94.02} \\
+SAM+Adam  & 0.01        & 1.42$e^{-10}$ & 93.29 \\
+SGD       & 0.001       & 1.03$e^{-5}$ & 85.43 \\
+Adam      & 0.001       & 8.12$e^{-11}$ & \textcolor{red}{93.63} \\
+AdaBelief & 0.001       & 1.78$e^{-10}$ & 93.67 \\
+SAM       & 0.001       & 4.15$e^{-7}$ & 92.51 \\
+SAM+Adam  & 0.001       & 5.08$e^{-12}$ & \textcolor{red}{93.94} \\
+SGD       & 0.0001      & 3.72$e^{-3}$ & 83.94 \\
+Adam      & 0.0001      & 6.86$e^{-11}$ & 92.40 \\
+AdaBelief & 0.0001      & 1.01$e^{-10}$ & 92.44 \\
+SAM       & 0.0001      & 8.55$e^{-5}$ & 91.15 \\
+SAM+Adam  & 0.0001      & 2.54$e^{-12}$ & 93.78 \\
+\bottomrule
+\end{tabular}
+\end{small}
+\end{center}
+\vskip -0.1in
+\end{table}
